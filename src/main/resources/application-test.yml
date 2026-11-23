@@ -1,0 +1,11 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+app:
+  model:
+    base-url: http://test-model
+    api-key: test-key
+    name: fake-test
+    timeout: 3s
+    max-tool-rounds: 3
+    tool-loop-timeout: 10s

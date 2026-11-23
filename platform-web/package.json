@@ -1,0 +1,26 @@
+{
+  "name": "shopguard-platform-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "vue-tsc --noEmit",
+    "build": "npm run typecheck && vite build"
+  },
+  "dependencies": {
+    "@lucide/vue": "1.71.0",
+    "dompurify": "3.4.17",
+    "marked": "18.2.0",
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "6.0.10",
+    "typescript": "5.9.3",
+    "vite": "8.3.5",
+    "vue-tsc": "3.3.13"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

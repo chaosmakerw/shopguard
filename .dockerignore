@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+target
+.maven-local
+.idea
+*.iml
+README.md
+**/node_modules
+data
+logs
+runtime

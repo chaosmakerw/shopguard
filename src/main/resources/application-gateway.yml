@@ -1,0 +1,8 @@
+# Activate after the base profile: dev,gateway or prod,gateway.
+# In Gateway mode, base-url is the complete conversation endpoint.
+app:
+  model:
+    base-url: ${GATEWAY_CHAT_URL:http://127.0.0.1:18081/api/gateway/chat}
+    api-key: ${GATEWAY_API_KEY:}
+    name: ${GATEWAY_MODEL:campus-chat}
+    timeout: ${GATEWAY_TIMEOUT:3s}

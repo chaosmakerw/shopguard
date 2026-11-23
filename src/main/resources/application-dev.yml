@@ -1,0 +1,11 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+app:
+  model:
+    base-url: ${MODEL_BASE_URL:http://localhost:11434}
+    api-key: ${MODEL_API_KEY:changeme}
+    name: ${MODEL_NAME:fake}
+    timeout: ${MODEL_TIMEOUT:10s}
+    max-tool-rounds: ${MODEL_MAX_TOOL_ROUNDS:3}
+    tool-loop-timeout: ${MODEL_TOOL_LOOP_TIMEOUT:30s}

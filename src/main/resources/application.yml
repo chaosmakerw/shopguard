@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: shopguard
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true

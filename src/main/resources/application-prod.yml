@@ -1,0 +1,37 @@
+app:
+  model:
+    base-url: ${MODEL_BASE_URL}
+    api-key: ${MODEL_API_KEY}
+    name: ${MODEL_NAME}
+    timeout: ${MODEL_TIMEOUT:10s}
+    max-tool-rounds: ${MODEL_MAX_TOOL_ROUNDS:3}
+    tool-loop-timeout: ${MODEL_TOOL_LOOP_TIMEOUT:30s}
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 8
+      minimum-idle: 1
+      connection-timeout: 3000
+      initialization-fail-timeout: 10000
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema-mysql.sql
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${JWT_ISSUER_URI}
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: never
+server:
+  error:
+    include-message: never
+    include-stacktrace: never

@@ -1,0 +1,32 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+      group:
+        readiness:
+          include: readinessState,mysql,redis,vectorStore,model
+  health:
+    diskspace:
+      enabled: false
+
+app:
+  health:
+    mysql:
+      url: jdbc:mysql://mysql:3306/lesson0831?connectTimeout=2000&socketTimeout=2000
+      username: lesson0831
+      password: ${MYSQL_APP_PASSWORD}
+    redis:
+      host: redis
+      port: 6379
+      password: ${REDIS_PASSWORD}
+    vector:
+      url: http://qdrant:6333/healthz
+      api-key: ${QDRANT_API_KEY}
+    model:
+      mode: fake
